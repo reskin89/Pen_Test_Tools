@@ -44,9 +44,7 @@ func ScanPort(ip string, port int, timeout time.Duration) {
 			if strings.Contains(err.Error(), "too many open files") {
 					time.Sleep(timeout)
 					ScanPort(ip, port, timeout)
-			} else {
-					fmt.Println(port, "closed")
-			}
+			} 
 			return
 	}
 	
